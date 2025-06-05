@@ -70,7 +70,11 @@
       document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
 
-      if(data.weather[0].main == "Clouds"){
+      if(data.main.temp < 0){
+       
+        weatherIcon.src = "Pics/snow.png";
+  
+      }else if(data.weather[0].main == "Clouds"){
      
         weatherIcon.src =  "Pics/clouds.png";
        
